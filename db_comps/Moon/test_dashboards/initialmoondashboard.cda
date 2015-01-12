@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="moondata" type="sql.jndi">
+         <Jndi>moon</Jndi>
+      </Connection>
+      <Connection id="moondata_moonrise_set" type="sql.jndi">
+         <Jndi>moon</Jndi>
+      </Connection>
+      <Connection id="moondata_moonriseset" type="kettle.TransFromFile">
+         <KtrFile>load_dateintotable_csv.ktr</KtrFile>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="moondata"
+               id="moondata"
+               type="sql">
+      <Columns/>
+      <Parameters/>
+      <Query>select date, percent_full from dc_2013_2014</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="moondata_moonrise_set"
+               id="moondata_moonrise_set"
+               type="sql">
+      <Columns/>
+      <Parameters/>
+      <Query>select  date as moonrisedate,
+visible2
+, invisible2
+, visible1
+, invisible1  from dc_moon_riseandset
+order by year, month, day</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="moondata_moonriseset"
+               id="moondata_moonriseset"
+               type="kettle">
+      <Columns/>
+      <Parameters/>
+      <Query>output</Query>
+   </DataAccess>
+</CDADescriptor>

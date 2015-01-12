@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
+    <ExportManifestInformation exportDate="12-01-2015 08:24:31 EST" exportBy="admin" rootFolder="/public/"/>
+    <ExportManifestEntity path="Moon">
+        <ExportManifestProperty>
+            <EntityMetaData name="Moon" createdDate="2014-02-08T22:45:55.709+11:00" isFolder="true" path="Moon" isHidden="false" locale="en_US" title="Moon"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Moon/test_dashboards">
+        <ExportManifestProperty>
+            <EntityMetaData name="test_dashboards" createdDate="2014-02-08T22:46:09.946+11:00" isFolder="true" path="Moon/test_dashboards" isHidden="false" locale="en_US" title="test_dashboards"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Moon/test_dashboards/initialmoondashboard.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="initialmoondashboard.cda" createdDate="2014-02-08T22:54:06.126+11:00" isFolder="false" path="Moon/test_dashboards/initialmoondashboard.cda" isHidden="false" locale="en_US" title="initialmoondashboard.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Moon/test_dashboards/initialmoondashboard.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="initialmoondashboard.cdfde" createdDate="2014-02-08T22:46:35.242+11:00" isFolder="false" path="Moon/test_dashboards/initialmoondashboard.cdfde" isHidden="false" locale="en_US" title="initialmoondashboard.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Moon/test_dashboards/initialmoondashboard.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="initialmoondashboard.wcdf" createdDate="2014-02-08T22:46:35.198+11:00" isFolder="false" path="Moon/test_dashboards/initialmoondashboard.wcdf" isHidden="false" locale="en_US" description="initialmoondashboard" title="initialmoondashboard"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Moon/test_dashboards/initialmoondashboard_tmp.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="initialmoondashboard_tmp.cda" createdDate="2014-02-21T14:14:45.852+11:00" isFolder="false" path="Moon/test_dashboards/initialmoondashboard_tmp.cda" isHidden="false" locale="en_US" title="initialmoondashboard_tmp.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Moon/test_dashboards/initialmoondashboard_tmp.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="initialmoondashboard_tmp.cdfde" createdDate="2014-02-21T14:14:45.792+11:00" isFolder="false" path="Moon/test_dashboards/initialmoondashboard_tmp.cdfde" isHidden="false" locale="en_US" title="initialmoondashboard_tmp.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Moon/test_dashboards/initialmoondashboard_tmp.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="initialmoondashboard_tmp.wcdf" createdDate="2014-02-21T14:14:45.727+11:00" isFolder="false" path="Moon/test_dashboards/initialmoondashboard_tmp.wcdf" isHidden="false" locale="en_US" title="initialmoondashboard_tmp"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Moon/test_dashboards/load_dateintotable_csv.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="load_dateintotable_csv.ktr" createdDate="2014-02-18T22:38:15.914+11:00" isFolder="false" path="Moon/test_dashboards/load_dateintotable_csv.ktr" isHidden="false" locale="en_US" title="load_dateintotable_csv"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+</ns2:ExportManifest>
