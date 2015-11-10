@@ -14,6 +14,7 @@ public class JonesTemp {
    	   System.out.println(" }");
 	}
 	
+
 	public static int Sign(int input) { //returns sign of the integer
 		int temp = 0;
 		if (input < 0) temp = -1;
@@ -51,6 +52,34 @@ public class JonesTemp {
 		return temp;
 	}
 	
+	public static int[] abArray(int input, int[] inputArray) { //generates an array representing of the A, B choices for the state
+		int[] tempArray = new int[inputArray.length];
+		int[] referenceArray = new int[inputArray.length];
+		int temp = input;
+		for (int i=0; i < inputArray.length; i++) {
+			referenceArray[inputArray.length - 1 - i] = Power(2, i);
+		}
+		//
+		if (input < 0 || input >= Power(2, inputArray.length) ) { //check for errors, make sure it's in bounds
+			for (int i = 0; i < inputArray.length; i++) {
+				tempArray[i] = 999; //error message.  Hopefully gets caught.  Is there a better way to handle this??
+			}
+		}
+		else {
+			for (int i = 0; i< inputArray.length; i++) {
+				if (temp >= referenceArray[i]) {
+					tempArray[i] = 1;
+					temp = temp - referenceArray[i];
+				}
+				else {
+					tempArray[i] = 0;
+					temp = temp;
+				}
+			}
+		}
+		return tempArray;
+	}
+			
 		
 	public static int[][] BraidMatrix(int[] inputArray) { //returns BraidMatrix with input of a Braidword array
 		int[][] tempArray = new int[inputArray.length +2][MaxArrayAbsValue(inputArray)+2]; 
@@ -97,11 +126,19 @@ public class JonesTemp {
 		return tempArray;
 	}
 	
+	public static int Power(int inputBase, int inputExponent) { // computes Base^Exponent
+		int temp = 1;
+		for (int i = 0; i < inputExponent; i++) {
+			temp = temp * inputBase;
+		}
+		return temp;
+	}
 	
 	public static void MatrixOutput(int[][] inputMatrix) { //displays a non-ragged matrix 
 		for (int i = 0; i < inputMatrix.length; i++) {
 			for (int j = 0; j < inputMatrix[i].length; j++) {
-				System.out.print(" " + inputMatrix[i][j] + " ");
+				if (inputMatrix[i][j] < 0) System.out.print(" " + inputMatrix[i][j] + " ");
+				else System.out.print("  " + inputMatrix[i][j] + " ");
 			}
 			System.out.println("");
 		}
@@ -111,15 +148,26 @@ public class JonesTemp {
 	public static void main(String[] args) {
    	   //for (int i = 0; i < 10; i++)
    	   //System.out.println("Hello, world from Mac!");
-   	   int[] Braidword = {1,1,-1,-1 };
+   	   int[] Braidword = {1,-2,1,-2}; //list of integers
    	   ArrayRowPrint(Braidword); //check to see if Braidword is as we've defined
-   	   System.out.println(Writhe(Braidword));
-   	   System.out.println(MaxArrayAbsValue(Braidword));
+   	   System.out.println("Writhe is " + Writhe(Braidword));
+   	   //System.out.println(MaxArrayAbsValue(Braidword));
    	   int HeightDim = Braidword.length + 2;
    	   int WidthDim = MaxArrayAbsValue(Braidword) +2;
    	   System.out.println("HeightDim is " + HeightDim );
    	   System.out.println("WidthDim is " + WidthDim );
    	   int[][] tempMatrix = BraidMatrix(Braidword);
    	   MatrixOutput(tempMatrix);
+   	   int[] LoopCountVector = new int[Power(2,Braidword.length)];
+   	   for (int i = 0; i < LoopCountVector.length; i++) {
+   	   	   LoopCountVector[i] = 0;
+   	   } //creates an array to store all the values of the loop counts from every state
+   	   //System.out.println("Sum of entries in LoopCountVector = " + Writhe(LoopCountVector));
+   	   //System.out.println("LoopCountVector length is " + LoopCountVector.length);
+   	   //ArrayRowPrint(LoopCountVector);
+   	   int index = 6; //arbitrary choice to test abArray() function
+   	   System.out.println("ABIndex is " + index);
+   	   System.out.print("ABVector is ");
+   	   ArrayRowPrint(abArray(index, Braidword)); //this is the binary representation of ABIndex, written as an Array
    	}
 }
